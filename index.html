@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA PIAC TEST</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Podstawowe ikony -->
+  <link rel="icon" href="https://picsum.photos/192/192" type="image/png">
+  <link rel="apple-touch-icon" href="https://picsum.photos/152/152">
+
+  <!-- Meta dla iOS / standalone -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#db4938">
+  <meta name="apple-mobile-web-app-title" content="PWA PIAC">
+  <meta name="theme-color" content="#db4938">
+
+  <!-- Splash screens – tylko przykładowe, w praktyce wygeneruj własne -->
+  <link rel="apple-touch-startup-image" href="https://picsum.photos/1125/2436" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)">
+</head>
+<body>
+
+  <header class="header">
+    <ul class="Header-links-ul">
+      <li class="header-link" id="about-link">O mnie</li>
+      <li class="header-link" id="contact-link">Kontakt</li>
+      <li class="header-link" id="gallery-link">Galeria</li>
+    </ul>
+    <button id="theme-toggle">Zmień motyw</button>
+  </header>
+
+  <main></main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
