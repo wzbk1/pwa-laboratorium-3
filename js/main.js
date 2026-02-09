@@ -1,4 +1,3 @@
-// Rejestracja Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
@@ -6,8 +5,6 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.error('Błąd rejestracji SW', err));
   });
 }
-
-// ── Logika SPA ────────────────────────────────────────
 
 const pageUrls = {
   about:   '#about',
@@ -79,7 +76,6 @@ function validateForm() {
 }
 
 function renderGallery() {
-  // Stałe zdjęcia z seedami – zawsze te same, różne dla każdego indeksu
   const images = Array.from({length: 9}, (_, i) => {
     const seed = 100 + i; // Stały seed dla powtarzalności
     return {
@@ -118,7 +114,6 @@ function closeModal(e) {
   }
 }
 
-// Nawigacja hash
 document.querySelectorAll('.header-link').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -131,7 +126,6 @@ document.querySelectorAll('.header-link').forEach(link => {
 window.addEventListener('hashchange', renderFromHash);
 window.addEventListener('load', renderFromHash);
 
-// Theme toggle
 document.addEventListener('click', e => {
   if (e.target.id === 'theme-toggle') {
     document.body.classList.toggle('dark-mode');
